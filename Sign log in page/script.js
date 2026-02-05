@@ -1,19 +1,17 @@
-// State management
+
 let isSignupMode = true;
 let selectedUserType = 'student';
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', function () {
     updateUI();
 });
 
-// Toggle between Sign Up and Log In
+
 function toggleAuthMode() {
     isSignupMode = !isSignupMode;
     updateUI();
 }
 
-// Update UI based on current mode
 function updateUI() {
     const title = document.getElementById('authTitle');
     const submitBtn = document.getElementById('submitBtn');
@@ -26,7 +24,7 @@ function updateUI() {
     const socialText = document.getElementById('socialText');
 
     if (isSignupMode) {
-        // Sign Up Mode
+
         title.textContent = 'Sign Up';
         submitBtn.textContent = 'Sign up';
         toggleQuestion.textContent = 'Already have an account?';
